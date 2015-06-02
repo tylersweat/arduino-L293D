@@ -8,6 +8,8 @@ Download the source:
   
 and move ```L293D.h``` and ```L293D.cpp``` into your sketch folder.
 
+
+
 ```
 #include "L293D.h"
 // Order of pins: enable, a, b
@@ -22,6 +24,8 @@ motor(1); // Also full on forward
 motor(-1); // Also full on reverse
 ```
 
+#### Wiring
+For controlling motor speed more than 100% on or off, you must use a PWM enabled pin on the Arduino for the L293D enable pin.
 
 ### Example Arduino sketch
 
