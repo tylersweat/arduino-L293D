@@ -25,7 +25,7 @@ motor(-1); // Also full on reverse
 ```
 
 #### Wiring
-For controlling motor speed more than 100% on or off, you must use a PWM enabled pin on the Arduino for the L293D enable pin.
+For controlling motor speed more than 100% on or off, you must use a PWM enabled pin on the Arduino for the L293D enable pin (ie: pins 3, 5, 6, 9, 10, and 11 on Arduino Uno).
 
 ### Example Arduino sketch
 
@@ -41,14 +41,22 @@ setup()
 loop()
 {
   // Set motor speed and direction with a double value between -1 and 1
-  motor.set(.75);
+  motor.set(.75); // 75% power forward
   delay(5000);
-  motor.set(-.75);
+  motor.set(-.3); // 30% power reverse
   delay(5000);
   // Set motor speed and direction with an int value between -255 and 255
   motor.set(200);
   delay(5000);
-  motor.set(-200);
+  motor.set(-150);
   delay(5000);
+  
+  // Use motor.get() to get current speed and then update it from that
+  motor.set(-255);
+  while(motor.get() != 255)
+  {
+    motor.set(motor.get() + 5); // Increment motor speed from previous speed
+    delay(500); // Delay 500ms to see the speed changing
+  }
 }
 ```
