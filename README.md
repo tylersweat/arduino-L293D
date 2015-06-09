@@ -18,10 +18,10 @@ L293D motor(9, 8, 7);
 #### Setting motor speed
 ```
 motor.set(255); // Full on forward
-motor.set(-255); // Full on reverse
+motor.set(1); // Also full on forward
 
-motor(1); // Also full on forward
-motor(-1); // Also full on reverse
+motor.set(-255); // Full on reverse
+motor.set(-1); // Also full on reverse
 ```
 
 #### Wiring
@@ -42,21 +42,21 @@ loop()
 {
   // Set motor speed and direction with a double value between -1 and 1
   motor.set(.75); // 75% power forward
-  delay(5000);
+  delay(2500);
   motor.set(-.3); // 30% power reverse
-  delay(5000);
+  delay(2500);
   // Set motor speed and direction with an int value between -255 and 255
   motor.set(200);
-  delay(5000);
+  delay(2500);
   motor.set(-150);
-  delay(5000);
+  delay(2500);
   
   // Use motor.get() to get current speed and then update it from that
   motor.set(-255);
   while(motor.get() != 255)
   {
     motor.set(motor.get() + 5); // Increment motor speed from previous speed
-    delay(500); // Delay 500ms to see the speed changing
+    delay(100); // Delay 100ms to see the speed changing
   }
 }
 ```
