@@ -15,12 +15,12 @@ class L293D
   	L293D(int, int, int);
   	void set(double);
   	void set(int);
-  	double get();
+  	int get();
   private:
   	int pin_E;
   	int pin_A;
   	int pin_B;
-  	double val;
+  	int val;
 };
 
 #endif
