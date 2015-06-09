@@ -6,15 +6,9 @@ Download the source:
 
   ```git clone https://github.com/tysweat/arduino-L293D.git```
   
-and move ```L293D.h``` and ```L293D.cpp``` into your sketch folder.
+and manually install the library. (http://www.arduino.cc/en/Guide/Libraries#toc5)
 
 
-
-```
-#include "L293D.h"
-// Order of pins: enable, a, b
-L293D motor(9, 8, 7);
-```
 #### Setting motor speed
 ```
 motor.set(255); // Full on forward
@@ -30,7 +24,7 @@ For controlling motor speed more than 100% on or off, you must use a PWM enabled
 ### Example Arduino sketch
 
 ```
-#include "L293D.h"
+#include <L293D.h>
 
 L293D motor(9,8,7);
 
