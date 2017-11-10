@@ -12,10 +12,10 @@ and manually install the library. (http://www.arduino.cc/en/Guide/Libraries#toc5
 #### Setting motor speed
 ```
 motor.set(255); // Full on forward
-motor.set(1); // Also full on forward
+motor.set(1.0); // Also full on forward
 
 motor.set(-255); // Full on reverse
-motor.set(-1); // Also full on reverse
+motor.set(-1.0); // Also full on reverse
 ```
 
 #### Wiring

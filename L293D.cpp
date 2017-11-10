@@ -1,6 +1,6 @@
 /* 
  * L293D.cpp - Library for using a L293D motor controller chip
- * Created by Ty Sweat, May 25 2015
+ * Created by Tyler Sweat, May 25 2015
  * Released under the MIT License
  */
 
