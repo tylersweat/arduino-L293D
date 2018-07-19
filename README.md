@@ -4,7 +4,7 @@ Arduino library for using a L293D motor controller chip
 ## Usage
 Download the source:
 
-  ```git clone https://github.com/tysweat/arduino-L293D.git```
+  ```git clone https://github.com/tylersweat/arduino-L293D.git```
   
 and manually install the library. (http://www.arduino.cc/en/Guide/Libraries#toc5)
 
