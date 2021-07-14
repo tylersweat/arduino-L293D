@@ -1,4 +1,4 @@
-/* 
+/*
  * L293D.cpp - Library for using a L293D motor controller chip
  * Created by Tyler Sweat, May 25 2015
  * Released under the MIT License
@@ -43,7 +43,7 @@ void L293D::set(int value)
         digitalWrite(pin_B, LOW);
         // enable
         analogWrite(pin_E, value);
-        // Save value its been set to
+        // Save value it's been set to
         val = value;
     }
     else if(value < 0 && value >= -255)
@@ -54,8 +54,8 @@ void L293D::set(int value)
         digitalWrite(pin_A, LOW);
         digitalWrite(pin_B, HIGH);
         // enable
-        analogWrite(pin_E, value);
-        // Save value its been set to
+        analogWrite(pin_E, -1*value); // Multiply by -1 to make sure the value is positive.
+        // Save value it's been set to
         val = value;
     }
 }
